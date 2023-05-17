@@ -75,12 +75,13 @@ function EditValues(props) {
           />
         </div>
 
-        <div className={styles.valor}>
-          <label htmlFor="date">Data:</label>
+        <div className={styles.date}>
+          <label htmlFor="date" className={styles.calenderadd}>Data:</label>
           <DatePicker
+            className={styles.inputtext}
+            id="date"
             selected={date}
             onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"
           />
         </div>
 
