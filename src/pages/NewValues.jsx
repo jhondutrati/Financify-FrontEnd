@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import styles from "../Styles/New.module.css";
 
 function NewValues({ onAddCharge }) {
   const [description, setDescription] = useState("");
   const [value, setValue] = useState("");
+  const [date, setDate] = useState(new Date());
   const navigate = useNavigate();
 
   const handleDescriptionChange = (event) => {
@@ -15,12 +18,16 @@ function NewValues({ onAddCharge }) {
     setValue(event.target.value);
   };
 
+  const handleDateChange = (selectedDate) => {
+    setDate(selectedDate);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const newCharge = {
       description,
       value: parseFloat(value),
-      date: new Date(),
+      date,
     };
     onAddCharge(newCharge);
     setDescription("");
@@ -52,8 +59,17 @@ function NewValues({ onAddCharge }) {
             onChange={handleValueChange}
           />
         </div>
+        <div className={styles.date}>
+          <label htmlFor="date" className={styles.calenderadd}>Data:</label>
+          <DatePicker
+            className={styles.inputtext}
+            id="date"
+            selected={date}
+            onChange={handleDateChange}
+          />
+        </div>
         <div className={styles.meuelemento}>
-          <button className={styles.btnadd} type="submit">
+          <button className={styles.btnadd} onClick={() => navigate("/home")}>
             Adicionar
           </button>
           <button
