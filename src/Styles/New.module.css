@@ -40,7 +40,17 @@
   background-color: #461bff;
   align-items: center;
 }
-
+.date{
+ margin-right: 25px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+.calenderadd{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .btnadd:hover {
   background-color: #291ad8;
   font-weight: 700;

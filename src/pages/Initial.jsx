@@ -12,7 +12,7 @@ function handleLogin() {
         <div>
           <h1>Bem-vindo ao App de Controle Financeiro</h1>
           <p>
-            O nosso aplicativo ajuda você a gerenciar suas finanças de maneira fácil e eficiente.
+            O nosso Site ajuda você a gerenciar suas finanças de maneira fácil e eficiente.
             Registre suas receitas, despesas e acompanhe seu orçamento de forma simples e intuitiva.
           </p>
           <button className={styles.btnadd} onClick={handleLogin}>Fazer login</button>
