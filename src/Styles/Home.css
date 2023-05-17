@@ -1,0 +1,107 @@
+.table-without-bg {
+  width: 100%;
+  background-color: transparent;
+  color: #333;
+  overflow-x: auto; /* Adicionado para rolagem horizontal em telas estreitas */
+}
+
+.table-without-bg thead th {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #141414;
+  color: white;
+  padding: 10px 7px 9px 10px;
+  
+}
+
+.table-without-bg tbody td {
+  padding: 10px;
+  font-size: 15px;
+  background-color: #141414;
+  margin: 15px 15px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.table-without-bg tbody tr:nth-child(odd) {
+  background-color: #333;
+  background-color: transparent;
+}
+
+.table-without-bg tbody tr:hover {
+  background-color: #333;
+  background-color: transparent;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #023E73;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 5px;
+}
+
+.edit-button:hover {
+  background-color: #04ADBF;
+}
+
+.delete-button {
+  background-color: #BF0000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 5px;
+}
+
+.delete-button:hover {
+  background-color: #FF0000;
+}
+
+@media (max-width: 768px) {
+  .table-without-bg {
+    overflow-x: auto;
+  }
+
+  .table-without-bg thead th,
+  .table-without-bg tbody td {
+    white-space: nowrap;
+    min-width: 100px; /* Define um tamanho mínimo para as colunas */
+  }
+
+  .table-without-bg thead,
+  .table-without-bg tbody,
+  .table-without-bg th,
+  .table-without-bg td,
+  .table-without-bg tr {
+    display: block;
+  }
+
+  .table-without-bg tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 12px;
+    padding: 6px 12px; /* Reduz o espaço ocupado pelos botões */
+  }
+}
